@@ -21,7 +21,7 @@ h6 {
   --color-primary: #4a90e2;
   --color-secondary: #f5a623;
   --color-accent: #8b572a;
-  --color-neutral: #333333; 
+  --color-neutral: #333333;
   --color-base-100: #f9f9f9;
   --color-base-200: #f0f0f0;
   --color-info: #93c5fd;
@@ -45,5 +45,10 @@ a.active {
   color: #f5a623;
   font-weight: 600;
   text-decoration: underline;
-  
+}
+
+#nav {
+  transform: translateZ(0);
+  filter: blur();
+  perspective: 1000px;
 }

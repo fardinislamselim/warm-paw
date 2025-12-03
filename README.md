@@ -1,94 +1,113 @@
 # 🐾 WarmPaws – Pet Care in Winter
 
+## 🌟 Project Overview
+
+**WarmPaws** is a warm, modern, and fully-responsive Single-Page Application (SPA) designed as an all-in-one hub for pet owners. It focuses on providing essential resources and services to ensure their furry friends are safe and comfortable during the cold winter months.
+
+The design philosophy centers on **minimalism**, **warm visuals**, and **approachability**, guaranteeing a delightful and informative user experience across all devices.
+
+-----
+
 ## 🌍 Live Demo
 
-🔗 **Visit Website:** [https://warm-paws-ph.netlify.app/](https://warm-paws-ph.netlify.app/)   
+Experience the coziness\!
 
----
+🔗 **Visit Website:** [https://paws-comfort.netlify.app/](https://paws-comfort.netlify.app/)
 
-## 🌨️ About the Project
+-----
 
-**WarmPaws** is a cozy and modern single-page application (SPA) designed to help pet owners care for their furry friends during the cold season.  
-It provides an all-in-one hub for exploring **local winter pet care services**, **pet clothing**, **grooming options**, and **expert winter care tips**.  
+## ✨ Key Features & Functionality
 
-The design emphasizes **minimalism**, **warm visuals**, and **approachability**, making it a delightful experience across all devices.
+Your pet's perfect winter care, all in one place.
 
+### 🏠 Core Content Pages
 
----
+  * **Home Page:** Features a winter-themed hero slider built with **Swiper.js**, dynamically loaded Popular Winter Care Services, and extra informative sections for tips, expert vets, and clothing collections.
+  * **Services Details (🔒 Protected Route):** Accessible only to logged-in users. Displays comprehensive service information and includes a straightforward "Book Service" form with success toast notifications.
+  * **About Us Page (✨ NEW):** Dedicated page to share the project's vision and team.
+  * **Contact Us Page (✨ NEW):** Provides users with easy methods to get in touch.
 
-## ✨ Key Features
+### 🔐 Robust User Authentication
 
-✅ **Home Page**
-- Winter-themed hero slider using **Swiper.js**.
-- Popular Winter Care Services — loaded dynamically from a local JSON file.
-- Service cards showing image, name, rating, price, and “View Details”.
-- Extra informative sections:
-  - “Winter Care Tips for Pets”
-  - “Meet Our Expert Vets”
-  - “Winter Clothing Collection”
+Powered by **Firebase Authentication** for secure and versatile login options.
 
-✅ **Service Details (Protected Route)**
-- Accessible only when logged in.
-- Shows all service info from JSON.
-- Includes a “Book Service” form:
-  - Fields: Name, Email  
-  - “Book Now” button → shows success toast and clears form.
+  * **Login & Signup:** Supports Email/Password and Google Sign-in/Sign-up.
+      * **Password Validation:** Enforces strong passwords (1 Uppercase, 1 Lowercase, Min. 6 characters).
+  * **Forgot Password:** Allows users to easily reset their password with an email redirection after the request.
+  * **My Profile:** Displays logged-in user details and allows for profile updates (Name, Photo URL) using Firebase's `updateProfile()`.
+  * **Protected Routes:** Ensures sensitive areas like **Service Details** and **My Profile** are only accessible after successful login.
 
-✅ **Authentication (Firebase)**
-- **Login Page:**  
-  - Email, Password, Forget Password, Google Sign-in  
-  - Redirects to intended route on login success  
-  - Password toggle eye button  
-- **Signup Page:**  
-  - Fields: Name, Email, Photo URL, Password  
-  - Password validation:  
-    - 1 Uppercase  
-    - 1 Lowercase  
-    - Minimum 6 characters  
-  - Google sign-up option  
-- **Forgot Password Page:**  
-  - Email field pre-filled if coming from login  
-  - Redirects user to Gmail after reset request  
+### 🎨 Design & Interactivity
 
-✅ **My Profile Page**
-- Displays logged-in user info (Name, Email, Photo)
-- “Update Profile” button → allows changing name or photo using `updateProfile()`
-- Fully functional logout option
+  * **Dark Mode (✨ NEW):** Seamlessly toggles between light and dark themes for improved accessibility and user preference, implemented using **DaisyUI** themes.
+  * **Smooth Animations:** Uses **AOS** (Animate On Scroll) and **Animate.css** for engaging and polished visual transitions.
+  * **Notifications:** Implements **react-hot-toast** for non-intrusive and timely user feedback (success, error, loading).
+  * **Responsive Design:** Fully optimized with **Tailwind CSS** to look great on mobile, tablet, and desktop.
 
-✅ **Other Highlights**
-- Toast notifications via **react-hot-toast**
-- Smooth animations using **AOS** and **Animate.css**
-- SPA with persistent Navbar & Footer (no reload errors)
-- Firebase configuration secured via environment variables
-- Deployed on **Netlify** (authorized domain added in Firebase)
-
----
-
+-----
 
 ## 🛠️ Technologies Used
 
-| Category | Tools / Technologies |
-|-----------|----------------------|
-| **Frontend Framework** | React.js (Vite) |
-| **Styling** | Tailwind CSS, DaisyUI |
-| **Routing** | React Router DOM |
-| **Authentication** | Firebase Authentication (Email/Password, Google OAuth) |
-| **State Management** | React Context API |
-| **Animations** | AOS, Animate.css |
-| **Slider / Carousel** | Swiper.js |
-| **Notifications** | React Hot Toast |
-| **Deployment** | Netlify |
-| **Version Control** | Git & GitHub |
+| Category | Tools / Technologies | Description |
+| :--- | :--- | :--- |
+| **Frontend** | React.js (Vite) | Fast and modern framework for the SPA. |
+| **Styling** | Tailwind CSS, DaisyUI | Utility-first CSS framework for rapid, customizable styling. |
+| **Routing** | React Router DOM | Handles client-side navigation and protected routes. |
+| **Authentication** | Firebase Auth | Secure, scalable user authentication (Email/Pass, Google OAuth). |
+| **State** | React Context API | Global state management for user authentication status. |
+| **Features** | Swiper.js, AOS, Animate.css | Slider component and smooth, engaging animations. |
+| **Feedback** | React Hot Toast | User-friendly toast notifications. |
+| **Deployment** | Netlify | Continuous deployment and hosting solution. |
+| **Version Control** | Git & GitHub | Source code management and collaboration. |
 
----
+-----
 
-## 🗂️ Screens & Routes
+## 📂 Screens & Routes
 
-| Route | Page | Access |
-|-------|------|--------|
-| `/` | Home | Public |
-| `/services/:id` | Service Details | 🔒 Protected |
-| `/login` | Login | Public |
-| `/register` | Signup | Public |
-| `/profile` | My Profile | 🔒 Protected |
-| `/forgot-password` | Forgot Password | Public |
+| Route | Page Name | Access Level | Description |
+| :--- | :--- | :--- | :--- |
+| `/` | Home | Public | Landing page with services and information. |
+| `/services/:id` | Service Details | Public | View details and book a service. |
+| `/about` | About Us | Public | Information about the project. |
+| `/contact` | Contact Us | Public | Contact information and form. |
+| `/login` | Login | Public | User sign-in page. |
+| `/register` | Signup | Public | New user registration. |
+| `/profile` | My Profile | **🔒 Protected** | User profile viewing and update. |
+| `/forgot-password` | Forgot Password | Public | Password reset request. |
+
+-----
+
+## 🚀 Getting Started (For Developers)
+
+To run this project locally, follow these steps:
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone [https://github.com/fardinislamselim/paws-comfort]
+    cd warmpaws-pet-care
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Set up Environment Variables:**
+    Create a `.env` file in the root directory and add your Firebase configuration:
+
+    ```
+    VITE_APIKEY="Your_Firebase_API_Key"
+    VITE_AUTHDOMAIN="Your_Auth_Domain"
+    VITE_PROJECTID="Your_Project_ID"
+    # ... and so on for all Firebase config variables
+    ```
+
+4.  **Run the project:**
+
+    ```bash
+    npm run dev
+    ```
+
+The application will now be running on `http://localhost:5173` (or the port specified by Vite).
