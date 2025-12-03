@@ -49,7 +49,7 @@ const Navbar = () => {
         <>
           <li>
             <NavLink
-              to="/my-profile"
+              to="/profile"
               className="font-medium text-white hover:text-white/80"
             >
               My Profile

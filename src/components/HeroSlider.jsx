@@ -93,7 +93,7 @@ const heroSlides = [
 
 const HeroSlider = () => {
   return (
-    <div className="w-full h-[520px] shadow-2xl overflow-hidden group rounded-3xl container px-2 mx-auto">
+    <div className="w-full h-[400px] shadow-2xl overflow-hidden group rounded-3xl container px-2 mx-auto">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation={{
