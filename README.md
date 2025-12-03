@@ -85,7 +85,7 @@ To run this project locally, follow these steps:
 
     ```bash
     git clone [https://github.com/fardinislamselim/paws-comfort]
-    cd warmpaws-pet-care
+    cd paws-comfort
     ```
 
 2.  **Install dependencies:**
